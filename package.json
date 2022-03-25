@@ -1,0 +1,21 @@
+{
+    "name": "Lorax",
+    "version": "1.0.0",
+    "main": "main.js",
+    "author": {
+        "name": "TheH2SO4",
+        "email": "theh2so4@protonmail.com"
+    },
+    "engines": {
+        "node": "17.7.2",
+        "npm": "8.5.5"
+    },
+    "scripts": {
+        "start": "node main.js",
+        "development": "nodemon main.js"
+    },
+    "dependencies": {
+        "@adiwajshing/baileys": "4.0.1",
+        "js-yaml": "4.1.0"
+    }
+}
