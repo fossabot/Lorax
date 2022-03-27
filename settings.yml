@@ -2,16 +2,22 @@
 # > Please edit the configuration with your own preferences. | Por favor edita la configuracion con tus propias preferencias.
 # > Don't hesitate to ask for help if you need to! | No temas solicitar ayuda si la necesitas!
 
+# | Enviroment Settings <|> Configuraciones de Entorno
+
+enviroment:
+  language: 'EN' # > Language of Lorax's Enviroment <|> Idioma del entorno de Lorax
+  # > Available Languages always are EN and ES <|> Los Idiomas disponibles siempre son EN y ES
+
 # | Basic Settings <|> Configuracion Basica
 basic:
   name: 'Lorax' # > Name of the actual bot <|> Nombre del bot
 
 # | Owner(s) Settings <|> Configuracion de Dueños(as)
 owners:
-  owners: [ # > Owner(s) Number(s) <|> Numero de los Dueños(as)
-    '+447309247974', # > Example 1
-    '+447309247973', # > Example 2
-    '+34663308360' # > Example 3
+  owners: [ # > Owner(s) Number(s) <|> Numero de los(as) Dueños(as)
+    '+447309247974', # > Example 1 <|> Ejemplo 1
+    '+447309247973', # > Example 2 <|> Ejemplo 2
+    '+34663308360' # > Example 3 <|> Ejemplo 3
   ]
 
 # | Development Settings (Don't touch!) <|> Configuracion de desarrollo (No tocar!)

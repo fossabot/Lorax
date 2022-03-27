@@ -1,7 +1,8 @@
 {
     "name": "Lorax",
-    "description": "Lorax is the most advanced WhatsApp bot! With two languages to choose from, Spanish and English!",
+    "description": "Lorax is the most advanced WhatsApp bot! With two languages to choose from, English and Spanish!",
     "website": "https://lorax.theh2so4.xyz",
+    "sucess_url": "https://lorax.theh2so4.xyz",
     "repository": "https://github.com/theh2so4/Lorax",
     "logo": "https://i.ibb.co/bQJT2ng/logo.png",
     "keywords": [

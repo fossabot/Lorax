@@ -36,19 +36,11 @@ const fs = require('fs')
 const { exec } = require('child_process')
 const yaml = require('js-yaml')
 const terminal = require( 'terminal-kit' ).terminal
+const CFonts = require('cfonts')
 
 // # ////////////////| [📓] - Files
 
 const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
-
-// # | Functions ⚙️
-
-const { banner, loading } = require('./src/functions/cli/banners')
-
-// # | Images 🖼️
-
-const img_logo = fs.readFileSync('./src/assets/logos/logo.png')
-const img_cli = fs.readFileSync('./src/assets/logos/cli.jpg')
 
 // # ////////////////| [🧪] - Constants
 
@@ -56,11 +48,40 @@ const img_cli = fs.readFileSync('./src/assets/logos/cli.jpg')
 
 // # ////////////////| [🍣] - Variables
 
+// # | Settings 🛠️
 
+const st_env_language = settings.enviroment.language
+const st_name = settings.basic.name
 
-// # ////////////////| [☢️] - Start
+// # ////////////////| [📢] - Functions
 
-banner()
+// # | Banners ❗
+
+async function banner() {
+    if (st_name === 'lorax' || st_name === 'Lorax') {
+        CFonts.say(`Lorax|TheH2SO4`, {
+            font: '3d',
+            align: 'center',
+            colors: ['#6C0BA9','#FFFF00']
+        })
+    } else {
+        CFonts.say(`${st_name}|Lorax`, {
+            font: '3d',
+            align: 'center',
+            colors: ['#6C0BA9','#FFFF00']
+        })
+    }
+}
+
+async function loading() {
+    var spinner = await terminal.spinner('unboxing-color')
+        if (st_env_language === 'EN') return terminal(' Loading...')
+        else if (st_env_language === 'ES') return terminal(' Cargando...')
+}
+
+// # ////////////////| [🛻] - Exports
+
+module.exports = { banner, loading }
 
 // # ////////////////| [🌧️] - End
 

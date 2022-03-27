@@ -1,5 +1,5 @@
 {
-    "name": "Lorax",
+    "name": "lorax",
     "version": "1.0.0",
     "main": "main.js",
     "author": {
@@ -16,6 +16,8 @@
     },
     "dependencies": {
         "@adiwajshing/baileys": "4.0.1",
-        "js-yaml": "4.1.0"
+        "js-yaml": "4.1.0",
+        "terminal-kit": "2.4.0",
+        "cfonts": "2.10.0"
     }
 }
