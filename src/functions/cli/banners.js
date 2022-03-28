@@ -35,7 +35,6 @@
 const fs = require('fs')
 const { exec } = require('child_process')
 const yaml = require('js-yaml')
-const terminal = require( 'terminal-kit' ).terminal
 const CFonts = require('cfonts')
 
 // # ////////////////| [📓] - Files
@@ -57,7 +56,7 @@ const st_name = settings.basic.name
 
 // # | Banners ❗
 
-async function banner() {
+function banner() {
     if (st_name === 'lorax' || st_name === 'Lorax') {
         CFonts.say(`Lorax|TheH2SO4`, {
             font: '3d',
@@ -73,15 +72,9 @@ async function banner() {
     }
 }
 
-async function loading() {
-    var spinner = await terminal.spinner('unboxing-color')
-        if (st_env_language === 'EN') return terminal(' Loading...')
-        else if (st_env_language === 'ES') return terminal(' Cargando...')
-}
-
 // # ////////////////| [🛻] - Exports
 
-module.exports = { banner, loading }
+module.exports = { banner }
 
 // # ////////////////| [🌧️] - End
 

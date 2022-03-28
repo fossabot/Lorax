@@ -35,7 +35,6 @@
 const fs = require('fs')
 const { exec } = require('child_process')
 const yaml = require('js-yaml')
-const terminal = require( 'terminal-kit' ).terminal
 
 // # ////////////////| [📓] - Files
 
@@ -43,12 +42,8 @@ const settings = yaml.load(fs.readFileSync('./settings.yml', 'utf8'))
 
 // # | Functions ⚙️
 
-const { banner, loading } = require('./src/functions/cli/banners')
-
-// # | Images 🖼️
-
-const img_logo = fs.readFileSync('./src/assets/logos/logo.png')
-const img_cli = fs.readFileSync('./src/assets/logos/cli.jpg')
+const { banner } = require('./src/functions/cli/banners')
+const { clear } = require('console')
 
 // # ////////////////| [🧪] - Constants
 
@@ -60,6 +55,7 @@ const img_cli = fs.readFileSync('./src/assets/logos/cli.jpg')
 
 // # ////////////////| [☢️] - Start
 
+clear()
 banner()
 
 // # ////////////////| [🌧️] - End
